@@ -1,3 +1,8 @@
+mojix_exporter
+==============
+
+This version of Kafka Exporter has only the metrics with the consumergroup offset and the lag. This makes the client faster and lighter. For every iteration that goes to Kafka it will only return a limited amount of information.
+
 ![kafka_exporter](https://socialify.git.ci/danielqsj/kafka_exporter/image?description=1&font=Inter&forks=1&pattern=Signal&stargazers=1&theme=Light)
 
 kafka_exporter
