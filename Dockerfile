@@ -2,6 +2,11 @@ FROM ubuntu:xenial as builder
 
 WORKDIR kafka_exporter
 
+# It requires Ubuntu to build because it inherits the architecture of the computer to have the binary
+# The binary needs to belong to a linux/amd platform
+# Some requirements are go.19 (apt-get install golang wont work as it downloads go.1.10)
+# Then it needs promu for some commands
+
 COPY . .
 RUN apt-get update && apt-get install wget make build-essential -y
 RUN wget https://go.dev/dl/go1.19.linux-amd64.tar.gz
